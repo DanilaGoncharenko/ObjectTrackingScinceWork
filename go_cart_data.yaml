@@ -1,0 +1,24 @@
+path: C:\ИТМО\НИР 2\data\dataset
+
+train: 
+  - train/go_cart/images
+  - train/go_cart/labels  # Явное указание путей к изображениям и меткам
+
+val: 
+  - val/go_cart/images
+  - val/go_cart/labels
+
+MODEL:
+  PRETRAIN_FILE: "AIATRACK_ep500.pth"
+  EXTRA_MERGER: False
+  RETURN_INTER: False
+  BACKBONE:
+    TYPE: AIATRACK_ep500
+    STRIDE: 16
+  HEAD:
+    TYPE: CENTER
+    NUM_CHANNELS: 256
+
+names:
+  0: person
+  1: go_cart

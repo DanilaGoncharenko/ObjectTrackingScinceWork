@@ -1,0 +1,19 @@
+train: C:\ИТМО\НИР 2\data\dataset\train\images
+val: C:\ИТМО\НИР 2\data\dataset\val\images
+
+MODEL:
+  PRETRAIN_FILE: "AIATRACK_ep500.pth"
+  EXTRA_MERGER: False
+  RETURN_INTER: False
+  BACKBONE:
+    TYPE: AIATRACK_ep500
+    STRIDE: 16
+  HEAD:
+    TYPE: CENTER
+    NUM_CHANNELS: 256
+
+names:
+  0: skier 
+  1: viewer
+ 
+  
